@@ -1,0 +1,1 @@
+A1,A2,spouse,A2,A1,spouse,A1,C4,dependent,C4,A1,adult,A2,C4,dependent,C4,A2,adult,A1,C5,dependent,C5,A1,adult,A2,C5,dependent,C5,A2,adult
