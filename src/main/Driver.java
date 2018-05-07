@@ -2,22 +2,24 @@ package main;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Driver {
 	//network path for storage of prior users
-	   private String file_name_user = "C:/Users/HannahBorash/Judo Capital Ltd/OneDrive - Judo Capital Ltd/Post-grad/Advanced Programming/Assignment1v2/src/main/userdb.txt";
+	   private Path file_name_user = Paths.get("userdb.txt").toAbsolutePath();
 	 //network path for storage of prior relationships
-	   private String file_name_relationship = "C:/Users/HannahBorash/Judo Capital Ltd/OneDrive - Judo Capital Ltd/Post-grad/Advanced Programming/Assignment1v2/src/main/relationshipdb.txt";
+	   private Path file_name_relationship = Paths.get("relationshipdb.txt").toAbsolutePath();
 	   private int selectionnumber = 0; // to match with the user table
 	   private String usernum = "na"; // to match with relationships table
 	   //array to reference for users in system   
 	   private ArrayList<Users> userdatabase = new ArrayList<Users>();
 	   private ArrayList<Relationships> relationshipdatabase = new ArrayList<Relationships>();
 	   private Scanner input = new Scanner(System.in);
-	   private File file = new File(file_name_user); {
+	   private File file = new File(file_name_user.toString()); {
 		
 	   //error handling when the network user file cannot be found
 		   try {
@@ -51,7 +53,7 @@ public class Driver {
 		   }	
 	}
 	   //error handling when the network relationship file cannot be found
-	   private File file2 = new File(file_name_relationship); {
+	   private File file2 = new File(file_name_relationship.toString()); {
 		   
 		   //error handling when the network user file cannot be found
 			   try {
